@@ -1,0 +1,23 @@
+<div class="table-responsive">
+    <table class="contacts_table table table-condensed table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Contact Name</th>
+            <th>Phone Number</th>
+            <th class="button_column"></th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr *ng-for="#contact of contacts">
+            <td><input class="form-control" type="text" [(ng-model)]="contact.name"/></td>
+            <td><input class="form-control" type="text" [(ng-model)]="contact.phoneNumber"/></td>
+            <td class="button_column"><span class="remove_icon contact_icon glyphicon glyphicon-remove" (click)="removeContact()"></span></td>
+        </tr>
+        <tr>
+            <td><input class="form-control" type="text" #name="" required /></td>
+            <td><input class="form-control" type="text" #phone="" required /></td>
+            <td class="button_column"><span class="add_icon contact_icon glyphicon glyphicon-plus" (click)="addContact(name.value, phone.value)"></span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

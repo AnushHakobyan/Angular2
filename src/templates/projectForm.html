@@ -1,0 +1,81 @@
+<sys-tab>
+    <sys-section>
+        <sys-subsection>
+            <!--<sys-project></sys-project>-->
+            <!--<sys-portfolio></sys-portfolio>-->
+            <div class="project_content container">
+                <div class="row">
+                    <form #f="form">
+                        <div class="row">
+                            <div class="project_title col-lg-12">{{projectModel.title}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <project-contacts [contacts]="projectModel.projectContacts" [project_id]="projectModel.id"></project-contacts>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="form-group">
+                                        <label for="region">
+                                            Region
+                                        </label>
+                                        <select id="region" class="form-control"
+                                                [(ng-model)]="selectedRegionId"
+                                                ng-control="region">
+                                            <option *ng-for="#region of regions" [value]="region.id">
+                                                {{ region.name }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="district">
+                                            District
+                                        </label>
+                                        <select id="district" class="form-control"
+                                                [(ng-model)]="selectedDistrictId"
+                                                ng-control="district">
+                                            <option *ng-for="#district of districts" [value]="district.id">
+                                                {{ district.name }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="program">
+                                        Program
+                                    </label>
+                                    <select id="program" #program class="form-control"
+                                            [(ng-model)]="projectModel.programId" (change)="updateSubProgramList(program.value)"
+                                            ng-control="programId">
+                                        <option *ng-for="#program of programs" [value]="program.id">
+                                            {{ program.name }}
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subProgram">
+                                        Subprogram
+                                    </label>
+                                    <select id="subProgram" #subProgram class="form-control"
+                                            [(ng-model)]="projectModel.subProgramId"
+                                            ng-control="subProgramId">
+                                        <option *ng-for="#subProgram of subPrograms" [value]="subProgram.id">
+                                            {{ subProgram.name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class=col-md-12"">
+                                <button type="submit" class="btn btn-default" (click)="getModelJson()">Click Me!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </sys-subsection>
+    </sys-section>
+</sys-tab>

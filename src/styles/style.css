@@ -1,0 +1,43 @@
+.remove_icon {
+    color: #787878;
+}
+
+.add_icon {
+    color: #7cb270;
+}
+
+.contact_icon {
+    cursor: pointer;
+}
+
+.button_column {
+    width:5%;
+    vertical-align: middle;
+    text-align:center;
+}
+
+.contacts_table input {
+    /*border:0px;*/
+    /*box-shadow: none;*/
+    height:28px;
+    padding:2px 12px;
+    background-color: transparent;
+}
+
+.contacts_table th{
+    color: #545454;
+    text-align: center;
+    background-color: #f0f7ee;
+}
+
+.project_content {
+    padding-top: 30px;
+    /*border: 1px solid #cdcdcd;*/
+    /*padding-left:15px;*/
+    /*padding-right:15px;*/
+}
+
+.project_title {
+    padding:5px 15px;
+    font-size: 20px;
+}

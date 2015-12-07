@@ -1,0 +1,15 @@
+<div class="form-group">
+    <select [(ng-model)]="selectedRegion.name" class="form-control">
+        <option *ng-for="#region of regions" [value]="region.name">
+            {{ region.name }}
+        </option>
+    </select>
+</div>
+<!--<input type="text" [(ng-model)]="testInput"/>-->
+<!--<select width="200">-->
+    <!--<option > &#45;&#45; select &#45;&#45; </option>-->
+    <!--<option *ng-for="#district of districts">-->
+        <!--{{ district.name }}-->
+    <!--</option>-->
+<!--</select>-->
+<!--<button (click)="getData()">Click me!</button>-->

@@ -1,0 +1,18 @@
+<div>
+    <table class="table table-condensed table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Project Title</th>
+                <th>Project Code</th>
+                <th>Project Region</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ng-for="#project of projects">
+                <td class="title" (click)="goToProjectDetails(project)">{{project.title}}</td>
+                <td>{{project.code}}</td>
+                <td>{{project.region.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
